@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button{
+    cursor: pointer;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    font-variation-settings: "wdth" 100;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px;
+    border-style: solid;
+    gap: 0px;
+    margin: 0px;
+    background-color: goldenrod;
+}
+
+#calculator{
+    background-color: blueviolet;
+    display: flex; 
+    flex-direction: column;
+    border: 5px;
+    border-radius: 3px;
+    padding: 3px;
+
+
+}
+
+#display{
+    width: 440px;
+    height: 80px;
+    background-color: rgb(169, 174, 175);
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    font-variation-settings: "wdth" 100;
+    text-align: end;
+    padding-right: 10px;
+}
+
+
+.input-buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 5px; 
+    background-color: rgb(49, 32, 63);
+    
+
+}
+
+
+.number-buttons{
+    max-width: 307px;
+    display: flex;
+    padding: 0;
+    margin: 5px;
+    gap: 3px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.operator-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 5px;
+    
+}
+
+
+.numbers {
+    width: 100px;
+    height: 100px;
+    border: 2px;
+    border-style: solid;
+    gap: 0px;
+    margin: 0px;
+    background-color: goldenrod;
+
+}
+
+.operators{
+    width: 100px;
+    height: 100px;
+    border: 2px;
+    border-style: solid;
+    gap: 0px;
+    margin: 0px;
+    background-color: goldenrod;
+}
+
+/* #number-0 {
+    width: 203px;
+} */
