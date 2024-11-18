@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div id="calculator">
-        <div id="display"></div>
+        <div id="display"><span id="display-text"></span></div>
             <div class="input-buttons">
 
                 <div class="number-buttons">
-                    <button id="input-clear" class="numbers no-update">clear</button>
-                    <button id="input-undo" class="numbers no-update"><-</button>
-                    <button id="input-sign" class="numbers no-update sign-update">+/-</button>
-                    <button id="number-7" class="numbers">7</button>
-                    <button id="number-8" class="numbers">8</button>
-                    <button id="number-9" class="numbers">9</button>
-                    <button id="number-4" class="numbers">4</button>
-                    <button id="number-5" class="numbers">5</button>
-                    <button id="number-6" class="numbers">6</button>
-                    <button id="number-1" class="numbers">1</button>
-                    <button id="number-2" class="numbers">2</button>
-                    <button id="number-3" class="numbers">3</button>
-                    <button id="number-0" class="numbers">0</button>
-                    <button id="input-period" class="numbers no-update">.</button>
-                    <button id="input-mod" class="numbers no-update operators">%</button>
+                    <button id="input-clear" class="numbers  button-85 no-update" role="button"><i class="fa-solid fa-eraser"></i></button>
+                    <button id="input-undo" class="numbers button-85 no-update"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="input-sign" class="numbers button-85 no-update sign-update">+/-</button>
+                    <button id="number-7" class="numbers button-85">7</button>
+                    <button id="number-8" class="numbers button-85">8</button>
+                    <button id="number-9" class="numbers button-85">9</button>
+                    <button id="number-4" class="numbers button-85">4</button>
+                    <button id="number-5" class="numbers button-85">5</button>
+                    <button id="number-6" class="numbers button-85">6</button>
+                    <button id="number-1" class="numbers button-85">1</button>
+                    <button id="number-2" class="numbers button-85">2</button>
+                    <button id="number-3" class="numbers button-85">3</button>
+                    <button id="number-0" class="numbers button-85">0</button>
+                    <button id="input-period" class="numbers button-85 no-update">.</button>
+                    <button id="input-mod" class="numbers button-85 no-update operators">%</button>
                 </div>    
 
                 <div class="operator-buttons">
-                    <button id="operator/" class="operators">/</button>        
-                    <button id="operator*" class="operators">*</button>    
-                    <button id="operator-" class="operators">-</button>    
-                    <button id="operator+" class="operators">+</button>   
-                    <button id="operatorEval" class="no-update">=</button>        
+                    <button id="operator/" class="operators button-85">/</button>        
+                    <button id="operator*" class="operators button-85">*</button>    
+                    <button id="operator-" class="operators button-85">-</button>    
+                    <button id="operator+" class="operators button-85">+</button>   
+                    <button id="operatorEval" class="no-update button-85">=</button>        
                 </div>
 
             </div>

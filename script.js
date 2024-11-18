@@ -8,7 +8,7 @@ let sign = false;
 let result = "";
 
 const clearButton = document.querySelector("#input-clear");
-const display = document.querySelector("#display");
+const display = document.querySelector("#display-text");
 const numberButtons = document.querySelector(".number-buttons");
 const resultButtons = document.querySelector("#operatorEval");
 const operatorButtons = document.querySelectorAll("#input-mod, .operator-buttons .operators");
@@ -161,7 +161,7 @@ function clear(){
     number2 = -99;
     number1Set = false;
     number2Set = false;
-    if(result % 1 == 0) {
+    if(result % 1 == 0 || typeof result !== "number") {
         period = false;
     } else {
         period = true;
@@ -228,6 +228,7 @@ function operate(number1, operand, number2) {
                     display.textContent = number1.toFixed(12);
                 }
                 display.textContent = number1;
+                adjustFontSizeToFit(display);
             } else {
                 clear();
                 display.textContent = result;
@@ -235,6 +236,21 @@ function operate(number1, operand, number2) {
             
         } 
     }
+    
+}
+
+function adjustFontSizeToFit(){
+    const displayDiv = document.getElementById("display"); 
+    const displaySpan = document.getElementById("display-text");
+    let fontSize = 58;
+    display.style.fontSize = fontSize + "px";
+    console.log(displaySpan.offsetWidth + ", " + displayDiv.offsetWidth);
+        while (displaySpan.offsetWidth > displayDiv.offsetWidth && fontSize > 10) {
+            fontSize -= 1;
+            displaySpan.style.fontSize = fontSize + "px";
+        }
+    
+    console.log(displaySpan.style.fontSize);
     
 }
 
