@@ -17,11 +17,12 @@ const undoButton = document.querySelector("#input-undo");
 
 numberButtons.addEventListener("mousedown", function(e) {
     // e.target.style.backgroundColor = "red";  
+    if(display.textContent == "No div 0! >:|") {
+        clear();
+    }
     if(e.target.tagName === "BUTTON" && !e.target.classList.contains("no-update")){
-        if(display.textContent.length < 13) {
             display.textContent += e.target.textContent;
-        }
-        
+            adjustFontSizeToFit(display);
     }
 
     if(e.target.classList.contains("sign-update")) {
@@ -53,6 +54,9 @@ clearButton.addEventListener("mousedown", function(e) {
 })
 
 undoButton.addEventListener("mousedown", function(e) {
+    if(display.textContent == "No div 0! >:|") {
+        clear();
+    }
     if(display.textContent != "") {
         if(display.textContent.charAt(display.textContent.length - 1) == ".") {
             period = false;
@@ -242,7 +246,7 @@ function operate(number1, operand, number2) {
 function adjustFontSizeToFit(){
     const displayDiv = document.getElementById("display"); 
     const displaySpan = document.getElementById("display-text");
-    let fontSize = 58;
+    let fontSize = 54;
     display.style.fontSize = fontSize + "px";
     console.log(displaySpan.offsetWidth + ", " + displayDiv.offsetWidth);
         while (displaySpan.offsetWidth > displayDiv.offsetWidth && fontSize > 10) {
