@@ -7,6 +7,7 @@ let period = false;
 let sign = false;
 let result = "";
 
+
 const clearButton = document.querySelector("#input-clear");
 const display = document.querySelector("#display-text");
 const numberButtons = document.querySelector(".number-buttons");
@@ -14,6 +15,7 @@ const resultButtons = document.querySelector("#operatorEval");
 const operatorButtons = document.querySelectorAll("#input-mod, .operator-buttons .operators");
 const periodButton = document.querySelector("#input-period")
 const undoButton = document.querySelector("#input-undo");
+const history = document.querySelector("ul");
 
 numberButtons.addEventListener("mousedown", function(e) {
     // e.target.style.backgroundColor = "red";  
@@ -70,24 +72,27 @@ undoButton.addEventListener("mousedown", function(e) {
 operatorButtons.forEach(button => {
     button.addEventListener("mousedown", function(e) {
     console.log(e.target.textContent);
-    switch(e.target.textContent) {
-    case "+":
-        add();
-        break;
-    case "-":
-        subtract();
-        break;
-    case "*":
-        multiply();
-        break;
-    case "/":
-        divide();
-        break;
-    case "%":
-        mod();
-        break;
-    default:
-        display.textContent = "unknown op.";
+    console.log(display.textContent);
+    if(parseFloat(display.textContent) != "NaN" && display.textContent != "" && display.textContent != "." && display.textContent != "-") {
+        switch(e.target.textContent) {
+            case "+":
+                add();
+                break;
+            case "-":
+                subtract();
+                break;
+            case "*":
+                multiply();
+                break;
+            case "/":
+                divide();
+                break;
+            case "%":
+                mod();
+                break;
+            default:
+                display.textContent = "unknown op.";
+            }
     }
 });
 });
@@ -221,18 +226,18 @@ function operate(number1, operand, number2) {
                 if(result % 1 !== 0){
                     result = result.toPrecision(12);
                 }
-                display.textContent = parseFloat(result);
                 console.log(num1 + ", " + operand + ", " + num2);
                 console.log(parseFloat(result));
                 calculated = true;
                 clear();
+                display.textContent = parseFloat(result);
+                adjustFontSizeToFit(display);
+                const historyEntry = document.createElement("li");
+                historyEntry.textContent = parseFloat(number1) + " " + operand + " " + parseFloat(number2) + " = " + parseFloat(result);
+                historyEntry.classList = "historyItem";
+                history.appendChild(historyEntry);
                 number1 = parseFloat(result);
                 number1Set = true;
-                if(number1.length > 13) {
-                    display.textContent = number1.toFixed(12);
-                }
-                display.textContent = number1;
-                adjustFontSizeToFit(display);
             } else {
                 clear();
                 display.textContent = result;

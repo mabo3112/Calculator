@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fancy Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="calc-Icon.png">
 </head>
 <body>
     <div id="calculator">
@@ -13,7 +14,7 @@
             <div class="input-buttons">
 
                 <div class="number-buttons">
-                    <button id="input-clear" class="numbers  button-85 no-update" role="button"><i class="fa-solid fa-eraser"></i></button>
+                    <button id="input-clear" class="numbers  button-85 no-update"><i class="fa-solid fa-eraser"></i></button>
                     <button id="input-undo" class="numbers button-85 no-update"><i class="fa-solid fa-rotate-left"></i></button>
                     <button id="input-sign" class="numbers button-85 no-update sign-update">+/-</button>
                     <button id="number-7" class="numbers button-85">7</button>
@@ -45,6 +46,20 @@
 
 
     </div>
+    <div id="history">
+        <div id="history-caption">History</div>
+        <ul>
+            <li class="historyItem">988 * 3 = 2964</li>
+            <li class="historyItem">68.4898336414 / 95 = 0.720945617278</li>
+            <li class="historyItem">2964 + 6 = 2970</li>
+            <li class="historyItem">2970 / 541 = 5.48983364140</li>
+            <li class="historyItem">5.48983364140 % 25 = 5.48983364140</li>
+            <li class="historyItem">5.48983364140 + 63 = 68.4898336414</li>
+        </ul>
+    </div>
+
+
+
     <script src="script.js"></script>
 </body>
 </html>

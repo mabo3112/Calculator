@@ -38,6 +38,10 @@ html, body{
     
 } 
 
+.button-85:active:after {
+    background-color: #1a1919;
+}
+
 .button-85 {
     
     border: none;
@@ -45,12 +49,7 @@ html, body{
     color: rgb(255, 255, 255);
     cursor: pointer;
     position: relative;
-    font-family: "Fredoka", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    font-size: 40px;
+    
     z-index: 0;
     border-radius: 10px;
     user-select: none;
@@ -208,6 +207,29 @@ span{
 #operatorEval:hover::after {
     background-color: #474747;
 }
-/* #number-0 {
-    width: 203px;
-} */
+
+
+#history {
+    margin-left: 100px;
+    background-color: #303030;
+}
+
+#history-caption, .button-85, .historyItem{
+    font-size: 30px;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 40px;
+    color: #fff;
+}
+
+.historyItem{
+    color: #ffffff;
+    background-color: #303030;
+    list-style-type: none;
+    margin-top: 10px;
+    
+
+}
